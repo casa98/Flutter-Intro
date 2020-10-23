@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: Center(
-          child: Image(
-            image: AssetImage(
-              'assets/lds.jpg',
-            ),
+          child: Icon(
+            Icons.headset,
+            color: Colors.green,
+            size: 100,
           ),
         ),
         floatingActionButton: FloatingActionButton(
