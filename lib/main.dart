@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -11,21 +16,17 @@ void main() {
           centerTitle: true,
         ),
         body: Center(
-          child: Text(
-            'Hello world\nLet\'s learn a lot of Flutter!',
-            style: TextStyle(
-              fontSize: 20,
-              letterSpacing: 0.5,
-              fontFamily: 'Laila',
-              color: Colors.grey[800],
+          child: Image(
+            image: NetworkImage(
+              'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Text('Tap'),
+          child: Text('TAP'),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
