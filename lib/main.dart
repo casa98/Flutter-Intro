@@ -16,10 +16,14 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: Center(
-          child: Icon(
-            Icons.headset,
-            color: Colors.green,
-            size: 100,
+          // Also FlatButton (no shadow)
+          child: RaisedButton(
+            onPressed: () {},
+            child: Text(
+              'Tap me',
+            ),
+            color: Colors.lightBlue,
+            textColor: Colors.white,
           ),
         ),
         floatingActionButton: FloatingActionButton(
