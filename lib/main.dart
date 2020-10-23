@@ -17,16 +17,22 @@ class MyApp extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Container(
-          // This makes Container to take full width and height
-          //width: double.infinity,
-          //height: double.infinity,
-          padding: EdgeInsets.all(8),
-          margin: EdgeInsets.all(8),
-          color: Colors.grey[400],
-          child: Text(
-            'Hello girls',
-          ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text('Hello, world'),
+            FlatButton(
+              onPressed: () {},
+              color: Colors.green[100],
+              child: Text('Click me'),
+            ),
+            Container(
+              color: Colors.cyan,
+              padding: EdgeInsets.all(20),
+              child: Text('Inside container'),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
