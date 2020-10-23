@@ -22,18 +22,28 @@ class MyApp extends StatelessWidget {
           // To take the full space
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('Hello'),
+                  Text('World'),
+                ],
+              ),
+            ),
             Container(
               padding: EdgeInsets.all(20),
               color: Colors.green[300],
               child: Text('Hey there'),
             ),
             Container(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.all(40),
               color: Colors.cyan,
               child: Text('There hey'),
             ),
             Container(
-              padding: EdgeInsets.all(40),
+              padding: EdgeInsets.all(80),
               color: Colors.pink[300],
               child: Text('Ereht yeh'),
             ),
