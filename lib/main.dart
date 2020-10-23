@@ -17,20 +17,25 @@ class MyApp extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.end,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          // To take the full space
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text('Hello, world'),
-            FlatButton(
-              onPressed: () {},
-              color: Colors.green[100],
-              child: Text('Click me'),
+            Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.green[300],
+              child: Text('Hey there'),
             ),
             Container(
+              padding: EdgeInsets.all(30),
               color: Colors.cyan,
-              padding: EdgeInsets.all(20),
-              child: Text('Inside container'),
+              child: Text('There hey'),
+            ),
+            Container(
+              padding: EdgeInsets.all(40),
+              color: Colors.pink[300],
+              child: Text('Ereht yeh'),
             ),
           ],
         ),
