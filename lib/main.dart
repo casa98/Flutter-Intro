@@ -15,9 +15,9 @@ void main() {
             'Hello world\nLet\'s learn a lot of Flutter!',
             style: TextStyle(
               fontSize: 20,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2,
-              color: Colors.grey[600],
+              letterSpacing: 0.5,
+              fontFamily: 'Laila',
+              color: Colors.grey[800],
             ),
           ),
         ),
