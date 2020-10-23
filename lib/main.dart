@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,11 +17,15 @@ class MyApp extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Center(
-          child: IconButton(
-            // Just a clickable icon
-            icon: Icon(Icons.alternate_email),
-            onPressed: null,
+        body: Container(
+          // This makes Container to take full width and height
+          //width: double.infinity,
+          //height: double.infinity,
+          padding: EdgeInsets.all(8),
+          margin: EdgeInsets.all(8),
+          color: Colors.grey[400],
+          child: Text(
+            'Hello girls',
           ),
         ),
         floatingActionButton: FloatingActionButton(
