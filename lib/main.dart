@@ -16,11 +16,10 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: Center(
-          child: RaisedButton.icon(
-            onPressed: () {},
-            icon: Icon(Icons.mail),
-            label: Text('Send email'),
-            color: Colors.amber,
+          child: IconButton(
+            // Just a clickable icon
+            icon: Icon(Icons.alternate_email),
+            onPressed: null,
           ),
         ),
         floatingActionButton: FloatingActionButton(
