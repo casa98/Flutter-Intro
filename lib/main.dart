@@ -16,14 +16,11 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: Center(
-          // Also FlatButton (no shadow)
-          child: RaisedButton(
+          child: RaisedButton.icon(
             onPressed: () {},
-            child: Text(
-              'Tap me',
-            ),
-            color: Colors.lightBlue,
-            textColor: Colors.white,
+            icon: Icon(Icons.mail),
+            label: Text('Send email'),
+            color: Colors.amber,
           ),
         ),
         floatingActionButton: FloatingActionButton(
