@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,35 +15,33 @@ class MyApp extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          // To take the full space
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        body: Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text('Hello'),
-                  Text('World'),
-                ],
+            Expanded(
+              flex: 2,
+              child: Image.asset('assets/lds.jpg'),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 30.0),
+                color: Colors.yellowAccent,
+                child: Text(
+                  '2 portions',
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(20),
-              color: Colors.green[300],
-              child: Text('Hey there'),
-            ),
-            Container(
-              padding: EdgeInsets.all(40),
-              color: Colors.cyan,
-              child: Text('There hey'),
-            ),
-            Container(
-              padding: EdgeInsets.all(80),
-              color: Colors.pink[300],
-              child: Text('Ereht yeh'),
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 30.0),
+                color: Colors.amber,
+                child: Text(
+                  '1 portion',
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
           ],
         ),
