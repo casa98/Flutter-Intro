@@ -10,6 +10,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  List<String> quotes = [
+    'You know you\'re brilliant, but maybe you\'d like to understand what you did 2 weeks from now.',
+    'Software is like sex, it\'s better when it\'s free',
+    'If Microsoft ever does applications for Linux it means I\'ve won.'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +25,12 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('Awesone Linus Quotes'),
           backgroundColor: Colors.redAccent,
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+              // Map() fuction cycles through a list of data
+              quotes.map((quote) => Text(quote)).toList(),
         ),
       ),
     );
