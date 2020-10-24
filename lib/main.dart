@@ -4,50 +4,21 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          title: Text(
-            'Hello, Flutter World',
-          ),
-          centerTitle: true,
-        ),
-        body: Row(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Image.asset('assets/lds.jpg'),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 30.0),
-                color: Colors.yellowAccent,
-                child: Text(
-                  '2 portions',
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 30.0),
-                color: Colors.amber,
-                child: Text(
-                  '1 portion',
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Text('TAP'),
+          title: Text('Awesone Linus Quotes'),
+          backgroundColor: Colors.redAccent,
         ),
       ),
     );
