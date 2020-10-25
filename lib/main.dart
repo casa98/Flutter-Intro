@@ -43,7 +43,13 @@ class _MyAppState extends State<MyApp> {
               // Map() fuction cycles through a list of data
               quotes
                   .map(
-                    (quote) => QuoteCard(quote: quote),
+                    (quote) => QuoteCard(
+                        quote: quote,
+                        delete: () {
+                          setState(() {
+                            quotes.remove(quote);
+                          });
+                        }),
                   )
                   .toList(),
         ),

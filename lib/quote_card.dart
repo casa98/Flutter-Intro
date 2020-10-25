@@ -5,8 +5,9 @@ import 'quote.dart';
 class QuoteCard extends StatelessWidget {
   // Local var to store here the current quote to display its data
   final Quote quote;
+  final Function delete;
   // Receive in the constructor and add it to local var
-  QuoteCard({this.quote});
+  QuoteCard({this.quote, this.delete});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +33,21 @@ class QuoteCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 14.0,
                 color: Colors.grey[800],
+              ),
+            ),
+            Container(
+              alignment: Alignment.bottomRight,
+              child: FlatButton.icon(
+                color: Colors.red,
+                onPressed: delete,
+                icon: Icon(
+                  Icons.delete,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  'Delete',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ],
