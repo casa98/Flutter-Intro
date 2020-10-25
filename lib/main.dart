@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,23 +30,22 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      //debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
           title: Text('Awesone Linus Quotes'),
           backgroundColor: Colors.redAccent,
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:
-                // Map() fuction cycles through a list of data
-                quotes
-                    .map((quote) => Text('${quote.text} - ${quote.author}.\n'))
-                    .toList(),
-          ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+              // Map() fuction cycles through a list of data
+              quotes
+                  .map(
+                    (quote) => QuoteCard(quote: quote),
+                  )
+                  .toList(),
         ),
       ),
     );
